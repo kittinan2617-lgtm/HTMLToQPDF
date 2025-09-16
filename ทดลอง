@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>สุ่มเควสนักมวย</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    button { padding: 10px 20px; font-size: 20px; }
+    #quest { margin-top: 20px; font-size: 24px; color: darkred; }
+  </style>
+</head>
+<body>
+  <h1>🎲 สุ่มเควสนักมวย 🎲</h1>
+  <button onclick="randomQuest()">กดเพื่อสุ่ม</button>
+  <div id="quest"></div>
+
+  <script>
+    const quests = [
+      "หมัดตรง 300 ครั้ง",
+      "กระโดดเชือก 10 นาที",
+      "วิดพื้น 50 ครั้ง",
+      "ซ้อมเงา 3 ยก",
+      "Footwork 10 รอบ",
+      "ซ้อมคอมโบหมัด 5 แบบ",
+      "Core training 10 นาที",
+      "สปาร์เบา 2 ยก",
+      "ฝึกหลบหมัด 20 ครั้ง",
+      "วิ่งรอบยิม 10 รอบ"
+    ];
+
+    function randomQuest() {
+      const quest = quests[Math.floor(Math.random() * quests.length)];
+      document.getElementById("quest").innerText = "👉 เควสวันนี้: " + quest;
+    }
+  </script>
+</body>
+</html>
